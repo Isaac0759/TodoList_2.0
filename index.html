@@ -11,22 +11,25 @@
     <link rel="stylesheet" href="assets/bootstrap-icons/bootstrap-icons.css">
 </head>
 
-<body>
-    <header>
-        <nav class="navbar fixed-top navbar-expand-lg" id="header" style="box-shadow: 0 0 10px #ccc;">
-            <div class="container">
-                <h1 id="title" class="text-center"><i class="bi bi-journal-check text-primary"></i> Todos</h1>
-                <form action="#" method="get" class="form ms-auto d-none d-sm-block" id="search">
-                    <div class="input-group" style="box-shadow: 0 0 10px #ccc;">
-                        <button class="btn btn-secondary"><i class="bi bi-search"></i></button>
-                        <input type="search" id="search" placeholder="Rechercher une tache" class="form-control"
-                            style="border: none; box-shadow: none;">
-                    </div>
-                </form>
-            </div>
-        </nav>
-    </header>
-    <div class="container" style="margin-top: 100px;">
+<body class="bg-light">
+    <nav class="navbar fixed-top navbar-expand-lg" id="header" style="box-shadow: 0 0 10px #ccc;">
+        <div class="container">
+            <h1 id="title" class="text-center"><i class="bi bi-journal-check"></i> Todos</h1>
+            <form action="#" method="get" class="form ms-auto d-none d-sm-block" id="search">
+                <div class="input-group" style="box-shadow: 0 0 10px #ccc;">
+                    <button class="btn btn-secondary"><i class="bi bi-search"></i></button>
+                    <input type="search" id="search" placeholder="Rechercher une tache" class="form-control"
+                        style="border: none; box-shadow: none;">
+                </div>
+            </form>
+        </div>
+    </nav>
+    <div class="container" style="margin-top: 90px;">
+        <div class="progress">
+            <div class="progress-bar" id="bar"></div>
+        </div>
+    </div>
+    <div class="container" style="margin-top: 20px;">
         <div class="row mt-4">
             <div class="col-4 col-md-4" id="waiting">
                 <div class="card text-center">
@@ -36,12 +39,6 @@
                     <div class="card-body display-5">
                         <i class="bi bi-clock text-danger"></i>
                         <span id="tasks-restante"></span>
-                    </div>
-                    <div class="progress">
-                        <div class="progress-bar bg-danger progress-bar-striped progress-bar-animated" id="bar"
-                            role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"
-                            style="width: 75%">
-                        </div>
                     </div>
                 </div>
             </div>
@@ -54,12 +51,6 @@
                         <i class="bi bi-check-circle text-success"></i>
                         <span id="tasks-finie"></span>
                     </div>
-                    <div class="progress">
-                        <div class="progress-bar bg-success progress-bar-striped progress-bar-animated" id="bar"
-                            role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"
-                            style="width: 75%">
-                        </div>
-                    </div>
                 </div>
             </div>
             <div class="col-4 col-md-4" id="waiting">
@@ -71,18 +62,14 @@
                         <i class="bi bi-info-circle text-secondary"></i>
                         <span id="tasks-total"></span>
                     </div>
-                    <div class="progress">
-                        <div class="progress-bar bg-secondary progress-bar-striped progress-bar-animated" id="bar"
-                            role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"
-                            style="width: 75%">
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
-        <div class="content my-5" id="todo">
+
+        <div class="list-group w-auto mt-4">
 
         </div>
+
         <nav class="fixed-bottom">
             <div class="container">
                 <form action="#" class="form add" method="post">
@@ -94,10 +81,8 @@
                 </form>
         </nav>
     </div>
-
-
-    <script src="assets/JavaScript/bootstrap.bundle.js"></script>
     <script src="assets/JavaScript/script.js"></script>
+    <script src="assets/JavaScript/bootstrap.bundle.js"></script>
 </body>
 
 </html>
